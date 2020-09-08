@@ -1,0 +1,57 @@
+/* Originally sourced from https://codepen.io/mlms13/pen/LKFoy and modified */
+
+ 
+body {
+  background: linear-gradient(#ccc, #fff);
+  font: 14px sans-serif;
+  padding: 20px;
+  font-family:Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  line-height:1.6;
+}
+.page {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 26px auto 0;
+  max-width: 550px;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+}
+.page:before, .page:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.page:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+.page:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
+.page .title {
+  text-align:center;
+  font-weight:bold;
+}
+.signon {text-align:center;margin-bottom:8px}
+.signon>a {text-decoration:none;border-radius: 8px; background-color:darkblue;color:white;font-size:18pt;font-weight:bold;padding:8px}
+.signon>a:hover {box-shadow: 0 5px 15px rgba(0,0,0,0.3);}
+.signonalt {text-align:center;margin-bottom:8px}
+#signonform {height:100vh;margin-top:300px;background-color:gainsboro;padding:20px;font-size:20pt;}
+#signonform div {width:100%}
+#signonform div input{font-size:20pt;padding:3px}
+#signonform div label{display:inline-block;font-size:20pt;width:49%;text-align:right}
+#signonform .buttondiv {text-align:center;margin-top:10px}
+#signonform .button {font-size:20pt;background-color:darkblue;color:white;padding:3px;border-radius:8px}
+#signonform .title {text-align:center;font-weight:bold;}
+#signonform p {font-size:10pt;text-align:center}
