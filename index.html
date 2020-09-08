@@ -32,7 +32,7 @@
 <div class="signon">
 <a class="signbutton" id="signon" href="#signonform">Sign On</a>
 </div>
-<p class="signonalt">(Alternatively, email: <a href="mailto:{{ site.data.config.alt-email }}">{{ site.data.config.alt-email }}</a>)
+<p class="signonalt">(Alternatively, email: <a href="mailto:{{ site.data.config.email }}">{{ site.data.config.email }}</a>)
 </p>
 <p>Signed (in alphabetical order):</p>
 <ol class="signatories">
@@ -55,7 +55,7 @@
         <input type="hidden" name="_subject" value="Sign Request">
         <input type="text" name="_honey" style="display:none">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="site.url/thankyou.html">
+        <input type="hidden" name="_next" value="{{ site.url }}/thankyou.html">
         <input type="hidden" name="_replyto">
         <div class="buttondiv">
         <input class="button" type="submit" value="Send"></input>
