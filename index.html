@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>{{ site.data.config.title }}</title>
+</head>
+<style>
+    body {margin:0;font-family:Century Gothic, CenturyGothic, AppleGothic, sans-serif;line-height:1.6}
+    .page {text-align:justify;margin:0 auto; margin-top:40px;border-style:solid; border-width:1px;padding:1in;width: 70vw;box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);background-color:ghostwhite}
+    .page .title {text-align:center;font-weight:bold;}
+    .signon {text-align:center;margin-bottom:8px}
+    .signon>a {text-decoration:none;border-radius: 8px; background-color:darkblue;color:white;font-size:18pt;font-weight:bold;padding:8px}
+    .signon>a:hover {box-shadow: 0 5px 15px rgba(0,0,0,0.3);}
+    .signonalt {text-align:center;margin-bottom:8px}
+    #signonform {height:100vh;margin-top:300px;background-color:gainsboro;padding:20px;font-size:20pt;}
+    #signonform div {width:100%}
+    #signonform div input{font-size:20pt;padding:3px}
+    #signonform div label{display:inline-block;font-size:20pt;width:49%;text-align:right}
+    #signonform .buttondiv {text-align:center;margin-top:10px}
+    #signonform .button {font-size:20pt;background-color:darkblue;color:white;padding:3px;border-radius:8px}
+    #signonform .title {text-align:center;font-weight:bold;}
+    #signonform p {font-size:10pt;text-align:center}
+</style>
+<body>
+<div class="page">
+<div class="title">
+{{ site.data.config.pagetitle }}
+</div>
+{% include message.html %}
+
+<p class="signon">
+{{ site.data.config.signon-message }}
+</p>
+<div class="signon">
+<a class="signbutton" id="signon" href="#signonform">Sign On</a>
+</div>
+<p class="signonalt">(Alternatively, email: <a href="mailto:{{ site.data.config.alt-email }}">{{ site.data.config.alt-email }}</a>)
+</p>
+<p>Signed (in alphabetical order):</p>
+<ol class="signatories">
+    
+</ol>
+
+</div>
+<a name="signonform"></a>
+<div id="signonform">
+    <div class="title">Sign the Letter</div>
+    <form action="https://formsubmit.co/{{ site.data.config.email }}" method="POST">
+        <div>
+        <label for="name">Full Name:</label>
+        <input id="name" type="text" name="name" placeholder="Dr Joe Bloggs"></input>
+        </div>
+        <div>
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="someone@example.com"></input>
+        </div>
+        <input type="hidden" name="_subject" value="Sign Request">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="site.url/thankyou.html">
+        <input type="hidden" name="_replyto">
+        <div class="buttondiv">
+        <input class="button" type="submit" value="Send"></input>
+    </div>
+    </form>
+    <p>Submissions will be manually verified before being added. Submission does not guarantee addition to the list of signatories.</p>
+    <p><a href="privacy.html">Privacy Policy</a></p>
+</div>
+</body>
+</html>
