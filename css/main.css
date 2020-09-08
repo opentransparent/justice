@@ -1,23 +1,24 @@
 /* Originally sourced from https://codepen.io/mlms13/pen/LKFoy and modified */
 
- 
 body {
+  margin: 0px;
   background: linear-gradient(#ccc, #fff);
-  font: 14px sans-serif;
-  padding: 20px;
-  font-family:Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  line-height:1.6;
+  padding-top: 20px;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  line-height: 1.6;
+  color:#333;
 }
+
 .page {
   background: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin: 26px auto 0;
-  max-width: 550px;
-  min-height: 300px;
-  padding: 24px;
+  min-height: 90vh;
+  padding: 1in;
   position: relative;
-  width: 80%;
+  width: 70vw;
 }
+
 .page:before, .page:after {
   content: "";
   height: 98%;
@@ -25,33 +26,113 @@ body {
   width: 100%;
   z-index: -1;
 }
+
 .page:before {
   background: #fafafa;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   left: -5px;
   top: 4px;
   transform: rotate(-2.5deg);
 }
+
 .page:after {
   background: #f6f6f6;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   right: -3px;
   top: 1px;
   transform: rotate(1.4deg);
 }
+
 .page .title {
-  text-align:center;
-  font-weight:bold;
+  text-align: center;
+  font-weight: bold;
+  font-size:1.3em;
 }
-.signon {text-align:center;margin-bottom:8px}
-.signon>a {text-decoration:none;border-radius: 8px; background-color:darkblue;color:white;font-size:18pt;font-weight:bold;padding:8px}
-.signon>a:hover {box-shadow: 0 5px 15px rgba(0,0,0,0.3);}
-.signonalt {text-align:center;margin-bottom:8px}
-#signonform {height:100vh;margin-top:300px;background-color:gainsboro;padding:20px;font-size:20pt;}
-#signonform div {width:100%}
-#signonform div input{font-size:20pt;padding:3px}
-#signonform div label{display:inline-block;font-size:20pt;width:49%;text-align:right}
-#signonform .buttondiv {text-align:center;margin-top:10px}
-#signonform .button {font-size:20pt;background-color:darkblue;color:white;padding:3px;border-radius:8px}
-#signonform .title {text-align:center;font-weight:bold;}
-#signonform p {font-size:10pt;text-align:center}
+
+.signon {
+  text-align: center;
+  margin-bottom: 8px
+}
+
+.signon>a {
+  text-decoration: none;
+  background-color: lightgray;
+  color: darkslategray;
+  font-size: 18pt;
+  font-weight: bold;
+  padding: 8px;
+  margin-top:20px;
+  display:inline-block;
+  border-style:solid;
+  border-width:2px;
+  border-color: darkslategray;
+}
+
+.signon>a:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color:lightgray;
+  background-color:slategray;
+  
+}
+
+.signonalt {
+  text-align: center;
+  margin-bottom: 8px
+}
+
+#signonform {
+  height: 100vh;
+  margin-top: 300px;
+  background-color: gainsboro;
+  padding: 20px;
+  font-size: 20pt;
+}
+
+#signonform div {
+  width: 100%
+}
+
+#signonform div input {
+  font-size: 20pt;
+  padding: 3px
+}
+
+#signonform div label {
+  display: inline-block;
+  font-size: 20pt;
+  width: 49%;
+  text-align: right
+}
+
+#signonform .buttondiv {
+  text-align: center;
+  margin-top: 10px
+}
+
+#signonform .button {
+  background-color: lightgray;
+  color: darkslategray;
+  font-size: 20pt;
+  font-weight: bold;
+  padding: 8px;
+  border-style:solid;
+  border-width:2px;
+  border-color: darkslategray;
+  
+}
+#signonform .button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color:lightgray;
+  background-color:slategray;
+  
+}
+
+#signonform .title {
+  text-align: center;
+  font-weight: bold;
+}
+
+#signonform p {
+  font-size: 10pt;
+  text-align: center
+}
