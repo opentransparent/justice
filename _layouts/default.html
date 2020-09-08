@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>{{ site.data.config.title }}</title>
+    <title>{{ page.title }}</title>
 </head>
 <style>
     body {margin:0;font-family:Century Gothic, CenturyGothic, AppleGothic, sans-serif;line-height:1.6}
@@ -22,17 +22,17 @@
 <body>
 <div class="page">
 <div class="title">
-{{ site.data.config.pagetitle }}
+{{ page.pagetitle }}
 </div>
 {{ content }}
 
 <p class="signon">
-{{ site.data.config.signon-message }}
+{{ page.signon-message }}
 </p>
 <div class="signon">
 <a class="signbutton" id="signon" href="#signonform">Sign On</a>
 </div>
-<p class="signonalt">(Alternatively, email: <a href="mailto:{{ site.data.config.email }}">{{ site.data.config.email }}</a>)
+<p class="signonalt">(Alternatively, email: <a href="mailto:{{ page.email }}">{{ page.email }}</a>)
 </p>
 <p>Signed (in alphabetical order):</p>
 <ol class="signatories">
@@ -43,7 +43,7 @@
 <a name="signonform"></a>
 <div id="signonform">
     <div class="title">Sign the Letter</div>
-    <form action="https://formsubmit.co/{{ site.data.config.email }}" method="POST">
+    <form action="https://formsubmit.co/{{ page.email }}" method="POST">
         <div>
         <label for="name">Full Name:</label>
         <input id="name" type="text" name="name" placeholder="Dr Joe Bloggs"></input>
